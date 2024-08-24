@@ -1,0 +1,61 @@
+.grid {
+    display: grid;
+    /* /* width: 50%; */
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(3, min(200px));
+    /* grid-template-rows: repeat(3, 150px); */
+    gap: 1px;
+    background-color: #333;
+    padding: 5px;
+}
+
+@media (max-width: 600px) {
+    .grid {
+      grid-template-columns: repeat(3, 100px); /* 兩列均分 */
+    }
+}
+
+.cell {
+    aspect-ratio: 1 / 1; 
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 48px;
+    cursor: pointer;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+.popup .grid {
+    background-color: #f0f0f0;
+}
+.popup .cell {
+    background-color: #ddd;
+}
+.popup .cell.disabled {
+    background-color: #999;
+    color: #666;
+    cursor: not-allowed;
+    position: relative;
+}
+
+.popup .cell.disabled::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(211, 211, 211, 0.75); 
+    pointer-events: none;
+  }
