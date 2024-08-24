@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TMS</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="src/css/new_dream_city.css">
     <style lang="css">
         input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
@@ -24,7 +25,6 @@
 <body>
     <nav class="border-b shadow fixed w-full bg-white flex justify-between items-center px-4 py-2 h-16 ">
         <a href="/tms/index.html" class="text-2xl font-semibold">MapleStory</a>
-        <!-- maple_story/ -->
         <ul class="flex flex-row">
             <li class="py-2 px-4 mx-2 border border-black rounded-lg hover:bg-gray-100 cursor-pointer">
                 <a href="/tms/dream_city.html">夢之都</a>
@@ -63,79 +63,14 @@
 
             <h2 class="text-xl font-normal">夢之都 每週任務</h2>
 
-            <div class="flex h-100">
-                <div id="blocks" class="w-full mt-1 mr-6 flex flex-wrap">
-                    <div id="block7" class="w-1/3 h-1/3 border rounded flex justify-center items-center">
-                        <span>7</span>
-                    </div>
-                    <div id="block8" class="w-1/3 h-1/3 border rounded flex justify-center items-center">
-                        <span>8</span>
-                    </div>
-                    <div id="block9" class="w-1/3 h-1/3 border rounded flex justify-center items-center">
-                        <span>9</span>
-                    </div>
-                    <div id="block4" class="w-1/3 h-1/3 border rounded flex justify-center items-center">
-                        <span>4</span>
-                    </div>
-                    <div id="block5" class="w-1/3 h-1/3 border rounded flex justify-center items-center">
-                        <span>5</span>
-                    </div>
-                    <div id="block6" class="w-1/3 h-1/3 border rounded flex justify-center items-center">
-                        <span>6</span>
-                    </div>
-                    <div id="block1" class="w-1/3 h-1/3 border rounded flex justify-center items-center">
-                        <span>1</span>
-                    </div>
-                    <div id="block2" class="w-1/3 h-1/3 border rounded flex justify-center items-center">
-                        <span>2</span>
-                    </div>
-                    <div id="block3" class="w-1/3 h-1/3 border rounded flex justify-center items-center">
-                        <span>3</span>
-                    </div>
+            <div class="flex w-full h-100">
+                <div class="grid" id="mainGrid"></div>
+                <div class="popup" id="popup">
+                    <div class="grid" id="popupGrid"></div>
                 </div>
-
-                <ul id="list" class="flex flex-col">
-                    <li class='flex h-12 my-1'>
-                        <div class="h-12 w-16"><img class="h-full w-full" src='src/img/dreams/angel.png'></div>
-                        <input type='number' class='border rounded-r-lg w-16 px-6' name="angel" oninput="changeBlock(this)" min="1" max="9">
-                    </li>
-                    <li class='flex my-1'>
-                        <div class="h-12 w-16"><img class="h-full w-full" src='src/img/dreams/bed.png'></div>
-                        <input type='number' class='border rounded-r-lg w-16 px-6' name="bed" oninput="changeBlock(this)" min="1" max="9">
-                    </li>
-                    <li class='flex h-12 my-1'>
-                        <div class="h-12 w-16"><img class="h-full w-full" src='src/img/dreams/clock.png'></div>
-                        <input type='number' class='border rounded-r-lg w-16 px-6' name="clock" oninput="changeBlock(this)" min="1" max="9">
-                    </li>
-                    <li class='flex h-12 my-1'>
-                        <div class="h-12 w-16"><img class="h-full w-full" src='src/img/dreams/mirror.png'></div>
-                        <input type='number' class='border rounded-r-lg w-16 px-6' name="mirror" oninput="changeBlock(this)" min="1" max="9">
-                    </li>
-                    <li class='flex h-12 my-1'>
-                        <div class="h-12 w-16"><img class="h-full w-full" src='src/img/dreams/piano.png'></div>
-                        <input type='number' class='border rounded-r-lg w-16 px-6' name="piano" oninput="changeBlock(this)" min="1" max="9">
-                    </li>
-                    <li class='flex h-12 my-1'>
-                        <div class="h-12 w-16"><img class="h-full w-full" src='src/img/dreams/sofa.png'></div>
-                        <input type='number' class='border rounded-r-lg w-16 px-6' name="sofa" oninput="changeBlock(this)" min="1" max="9">
-                    </li>
-                    <li class='flex h-12 my-1'>
-                        <div class="h-12 w-16"><img class="h-full w-full" src='src/img/dreams/treasure.png'></div>
-                        <input type='number' class='border rounded-r-lg w-16 px-6' name="treasure" oninput="changeBlock(this)" min="1" max="9">
-                    </li>
-                    <li class='flex h-12 my-1'>
-                        <div class="h-12 w-16"><img class="h-full w-full" src='src/img/dreams/trumpet.png'></div>
-                        <input type='number' class='border rounded-r-lg w-16 px-6' name="trumpet" oninput="changeBlock(this)" min="1" max="9">
-                    </li>
-                    <li class='flex h-12 my-1'>
-                        <div class="h-12 w-16"><img class="h-full w-full" src='src/img/dreams/wardrobe.png'></div>
-                        <input type='number' class='border rounded-r-lg w-16 px-6' name="wardrobe" oninput="changeBlock(this)" min="1" max="9">
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
-
 
     <script src="src/js/dream_city.js"></script>
 </body>
