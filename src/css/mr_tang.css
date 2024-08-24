@@ -1,0 +1,30 @@
+.group-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.group {
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    width: 160px;
+}
+
+.content {
+    margin-top: 20px;
+    display: none;
+}
+
+.item {
+    display: inline-block;
+    margin: 0 5px;
+    font-weight: bold;
+}
+
+.arrow {
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 18px;
+}
